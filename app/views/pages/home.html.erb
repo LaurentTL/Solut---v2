@@ -1,15 +1,8 @@
 <div id="home-parallax">
-
   <div class="bgimg-1">
-    <div class="div-diag">
-      <!-- <img src="https://images.unsplash.com/photo-1496906767319-13bb5311c0e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80" alt="mguitarist" class="musician"> -->
-    </div>
     <div class="caption">
       <div class="home-header">
         <h1>SOL'UT</h1>
-        <h2>Meet up with other musicians near you and share your passion for music</h1>
-        <p>Solut helps musicians of all levels to find suitable bands and build long-lasting relationships</p>
-        <br>
         <div class="container-btn-top-page" style="position:absolute;bottom:30px;right:160px;">
             <% if user_signed_in? %>
             <% else  %>
@@ -20,76 +13,4 @@
       </div>
     </div>
   </div>
-
-  <div style="color: #777;background-color:#f4f4f4;text-align:center;padding:50px 80px;text-align: justify;">
-    <!-- <h3 style="text-align:center;">Parallax Demo</h3> -->
-    <div class="wrapper-user-story">
-      <div class="p1">
-        <%= image_tag "sing.png", class:"music-icons" %>
-        <h3>Meet new people</h3>
-        <br>
-        <p>Bored playing your instrument alone? Find fellow musicians to connect with through this unique platform and embark on your journey together</p>
-      </div>
-      <div class="p2">
-        <%= image_tag "guitar.png", class:"music-icons" %>
-        <h3>Play together</h3>
-        <br>
-        <p>Need an upright bass player, guitarist or tuba player? Post your inquiry to find musicians interested in joining your band and playing together</p>
-      </div>
-      <div class="p3">
-        <%= image_tag "score-stand.png", class:"music-icons" %>
-        <h3>Learn together</h3>
-        <br>
-        <p>Join, practice and share your experience. Develop your skills by learning from others and mastering a new piece of music together</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bgimg-2">
-    <div class="caption">
-      <div class="bg2-text">
-        <div>
-          <h3>Reach for the stars! Grow your circle of fellow <br> like-minded musicians and play your favorite songs</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="position:relative;">
-    <div class="homepage-steps" style="color:#ddd;background-color:#f4f4f4;text-align:center;padding:30px 50px;text-align: justify;">
-      <div class="p-middle-page mb-3">
-        <p class="my-1">Your music dreams are only a few steps away</p>
-        <p class="my-1">Discover the Sol'ut platform today!</p>
-        <!-- <button type="submit" value="Submit" id="discover-btn-bottom"><%#= link_to "DISCOVER", events_path, class:"btn-login" %></button> -->
-      </div>
-      <div class="d-flex flex-row justify-content-between mt-4">
-        <div class="steps-width d-flex flex-column align-items-center mx-3">
-          <h3>1.</h3>
-          <p style="text-align: center"><strong>Create your own profile</strong> page with personal song and video uploads that can be seen by fellow musicians</p>
-        </div>
-        <div class="steps-width d-flex flex-column align-items-center mx-3">
-          <h3>2.</h3>
-          <p style="text-align: center"><strong>Browse available bands</strong> (for play or learn together events) and send contact requests for individual bands</p>
-        </div>
-        <div class="steps-width d-flex flex-column align-items-center mx-3">
-          <h3>3.</h3>
-          <p style="text-align: center"><strong>Create own bands</strong> with specific location & instrument preferences. <strong>Chat with applicants</strong> for more infos</p>
-        </div>
-      </div>
-      <div class="mx-4" style="margin-top: 30px">
-        <h3>To then..</h3>
-        <p>Meet up and enjoy your music with your band colleagues. Keep practicing and chasing your dreams</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bgimg-3">
-    <div class="caption">
-    <!-- <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span> -->
-      <!-- <button type="submit" value="Submit" id="back-top-btn"><a href="#home-parallax">back to top</a></button> -->
-      <span class="border"><%= link_to "DISCOVER", events_path, class:"btn-login" %></span>
-
-    </div>
-  </div>
-
-</div>
+</div
