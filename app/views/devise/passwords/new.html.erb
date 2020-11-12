@@ -1,0 +1,25 @@
+<div id="profile-show">
+  <div class="content-wrapper">
+    <div class="container-profile">
+      <h2 class="title-profile">FORGOT YOUR PASSWORD?</h2>
+      <div class="container-signin">
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+          <div class="form-actions">
+            <div class="btn-position-profile">
+              <%= f.button :submit, "Send me reset password", id: "profile-btn" %>
+            </div>
+          </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

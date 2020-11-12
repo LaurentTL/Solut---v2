@@ -1,0 +1,39 @@
+<div class="content-wrapper">
+  <% if @events.size < 1 %>
+    <p style="color: grey">Unfortunately, there are no events corresponding to this search request.</p>
+    <p style="color: grey">Please try again with new filter settings.</p>
+
+  <% else %>
+    <% @events.order(created_at: :desc).each do |event| %>
+      <div class="event">
+        <div class="event-top d-flex flex-row justify-content-between">
+          <div class="event-left">
+            <div class="event-header">
+              <h3><%= event.genre %> - <%= event.title %></h3>
+              <div class="event-tag">
+                <p><strong><%= event.event_type %></strong></p>
+              </div>
+              <p style="color: grey"><i class="fas fa-map-marker-alt"></i> <%= event.location %></p>
+            </div>
+          </div>
+
+          <div class="event-right">
+            <%= link_to event_path(event) do %>
+              <button class='event-action' id='contact-btn-small'>Details</button>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="event-musicians d-flex flex-row">
+          <% event.participants.each do |user| %>
+            <%= render 'user_card', user: user, event: event %>
+          <% end %>
+
+          <% event.instruments_array.each do |instrument| %>
+            <%= render 'user_card_vacant', instrument: instrument %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

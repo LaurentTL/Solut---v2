@@ -1,0 +1,264 @@
+// Import page-specific CSS files here.
+@import "home";
+
+
+.title-events {
+  width: 300px;
+  text-align: center;
+  //border: 2px solid white;
+  //padding: 30px 10px;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.fixed-offset {
+  top: 56px;
+}
+
+.filter-margin {
+  margin-bottom: 55px;
+}
+
+#events-index {
+  background-color: #100c18;
+}
+
+.event-container {
+  width: 900px;
+  margin: auto;
+}
+
+.event-background {
+  background-color: #100c18;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.form-control {
+  background-color: transparent;
+  margin: 10px;
+  width: 180px;
+}
+
+.event-container h3 {
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.event {
+  align-items: left;
+  margin-top: 16px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  padding-bottom: 15px;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+.events {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.event .event-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.message-container {
+  max-width: 80%;
+  &.message-right {
+    justify-content: flex-start;
+    margin-left: auto;
+    flex-direction: row-reverse !important;
+    img {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+    div:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.event-right {
+  margin-right: 30px;
+}
+
+.event .event-header {
+  flex-grow: 1;
+  padding: 0 24px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.event-content img {
+  margin-right: 12px;
+}
+
+.event p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.event small {
+  color: #999999;
+  font-weight: bold;
+}
+.event .event-action {
+  display: flex;
+  transition: ease .3s;
+}
+
+.event:hover .event-action {
+  opacity: 1;
+}
+
+.event .event-action a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.event .event-action a:hover {
+  color: #555555;
+}
+
+.filters {
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px grey solid;
+  z-index: 100;
+}
+
+
+.filters * {
+  background-color: white;
+  display: inline-block;
+  vertical-align: baseline;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  margin-bottom: 5px;
+  border: 0;
+  border-radius: 0;
+  max-width: 100%;
+  padding: 4px 0 4px 2px;
+}
+
+#search_icon {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#search_icon * {
+  margin: 0;
+  padding: 0;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.event-avatar {
+  position: relative;
+  left: 20px;
+  top: 15px;
+  z-index: 5;
+}
+
+.instrument-card {
+  background: #534FC5;
+  height: 68px;
+  width: 150px;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-left: 30px;
+  border: 1px solid rgb(235,235,235);
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+.instrument-card h3 {
+  color: white;
+  font-size: 15px;
+  padding-top: 0;
+}
+
+.instrument-card p {
+  color: white;
+  font-size: 12px;
+}
+
+.vacant-card {
+  background: rgb(160, 160, 160);
+}
+
+.creator-card {
+  background: #1d2365;
+}
+
+.event-musicians {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 25px;
+}
+
+#events-show .event-musicians {
+    // overflow-x: auto;
+    // overflow-y: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    > .d-flex {
+      margin-top: 20px;
+    }
+}
+
+p.margin-creator{
+  margin-top: 5px;
+}
+
+.event-tag {
+  background-color: #dcd6f7;
+  width: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  p {
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+.event-content {
+  margin-bottom: 10px;
+}
+
+.event-top {
+  margin-top: 10px;
+  margin-right: 10px;
+}

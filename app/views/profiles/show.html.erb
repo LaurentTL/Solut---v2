@@ -1,0 +1,136 @@
+<div id="profile-show">
+  <div class="content-wrapper">
+    <div class="container-profile-show">
+      <h2 class="title-profile-show">PROFILES</h2>
+      <div class="profile-content-show">
+        <div class="first-profile-show">
+          <% if @user.profile_picture.attached? %>
+            <%= image_tag(@user.profile_picture, class: "edit-picture-profile", id: "editProfile") %>
+          <% else %>
+            <%= image_tag "https://res.cloudinary.com/dh8tpzykj/image/upload/v1582203695/avatar_empty_ghdihw.png", class: "edit-picture-profile", id: "editProfile" %>
+          <% end %>
+          <div class="first-row-show">
+            <div class="show-profile-nickname">
+              <% if @user.nick_name.nil? || @user.nick_name == "" %>
+                <%= "Not renseigned" %>
+              <% else %>
+                <%= @user.nick_name %>
+              <% end %>
+            </div>
+            <div class="show-profile-age">
+              <% if @user.age.nil? || @user.age == "" %>
+                <%= "Not renseigned" %>
+              <% else %>
+                age: <%= @user.age %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="second-profile-show">
+          <div class="description-center-show">Description</div>
+          <div class="description-text-show">
+            <% if @user.description.nil? || @user.description == "" %>
+              <%= "Not renseigned yet" %>
+            <% else %>
+              <%= @user.description %>
+            <% end %>
+          </div>
+          <div class="description-center-show">Repertory</div>
+            <div class="description-text-show">
+              <% if @user.genre_preferences.nil? || @user.genre_preferences == "" %>
+                <%= "Not renseigned yet" %>
+              <% else %>
+                <%= @user.genre_preferences  %>
+              <% end %>
+            </div>
+              <div class="description-center-show">Songs</div>
+              <div class="description-text-show">
+                <% if @user.user_media.count == 0 %>
+                  <%= "empty" %>
+                  <% else %>
+                    <% @user.user_media.each do |element| %>
+                      <% if element.medium_type == "song" %>
+                        <%= link_to element.title.html_safe, element.url, target: "_blank", class: "link-media" %><br />
+                      <% end %>
+                    <% end %>
+                <% end %>
+              </div>
+            <div class="description-center-show">Videos</div>
+            <div class="description-text-show">
+              <% if @user.user_media.count == 0 %>
+                <%= "empty" %>
+                <% else %>
+                  <% @user.user_media.each do |element| %>
+                    <% if element.medium_type == "video" %>
+                      <%= link_to element.title.html_safe, element.url, target: "_blank", class: "link-media" %><br />
+                    <% end %>
+                  <% end %>
+              <% end %>
+            </div>
+        </div>
+        <div class="third-profile-show">
+          <!-- <div class="my-song">MY SONGS</div>
+          <div class="my-media">MY VIDEOS</div> -->
+          <div class="instrument-center-show">Instruments</div>
+          <div class="instrument-profile-show">
+            <div class="my-event-text-show">
+              <% if @user.user_instruments.empty? %>
+                <%= "empty" %>
+              <% else %>
+                <% @user.user_instruments.each do |instrument| %>
+                  <%= instrument.instrument.name %> - (<%= instrument.proficiency %>)
+                  <br />
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          <div class="instrument-center-show">Events created</div>
+          <div class="instrument-profile-show">
+            <div class="my-event-text-show">
+              <% if @user.events.count == 0 %>
+                <%= "empty" %>
+                <% else %>
+                  <% @user.events.each do |event| %>
+                  <li>Event: <%= event.title %> (<%= event.event_type %>)</li>
+                  <% end %>
+              <% end %>
+            </div>
+          </div>
+          <!-- <div class="instrument-center-show">Videos</div>
+          <div class="instrument-profile-show">
+            <div class="instrument-text">
+              <#% if @user.user_media.count == 0 %>
+                <%#= "empty" %>
+                <#% else %>
+                  <#% @user.user_media.each do |element| %>
+                    <#% if element.medium_type == "song" %>
+                      <li><#%= element.title %></li>
+                    <#% end %>
+                  <#% end %>
+              <#% end %>
+            </div>
+          </div>
+          <div class="instrument-center-show">Songs</div>
+          <div class="instrument-profile-show">
+            <div class="instrument-text">
+              <#% if @user.user_media.count == 0 %>
+                <#%= "empty" %>
+                <#% else %>
+                  <#% @user.user_media.each do |element| %>
+                    <#% if element.medium_type == "video" %>
+                      <li><%#= element.title %></li>
+                    <#% end %>
+                  <#% end %>
+              <#% end %>
+            </div>
+          </div>
+          </div> -->
+          <div class="bottom-container-show">
+            <%= link_to "<< Go Back", :back, class: 'return_btn-show-profile' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

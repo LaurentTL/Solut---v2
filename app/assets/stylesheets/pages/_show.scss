@@ -1,0 +1,62 @@
+#events-show {
+  background-color: #0D0D0D;
+}
+
+.show-container {
+  width: 900px;
+  margin: 0px auto;
+  //margin-top: 20px;
+  //height: 50%;
+  padding-top: 10px;
+}
+
+.show-container h3 {
+  // color: grey;
+  padding-top: 15px;
+}
+
+.show-event-container {
+  flex-grow: 1;
+  width: 900px;
+}
+
+.show-event-container h3 {
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.contact-container {
+  margin-top: 30px;
+}
+
+.show-event {
+  align-items: left;
+  margin-top: 16px;
+  background: white;
+  padding: 8px 16px;
+  // border: 1px solid rgb(235,235,235);
+  //padding-bottom: 15px;
+  border-radius: 15px;
+  border: 1px solid #ebebeb;
+  opacity: 0.9;
+  overflow-y: hidden;
+}
+
+.chatroom {
+  background: #f1f3f4;
+}
+
+.events {
+  margin-top: 20px;
+}
+
+#contact_request_message {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+}
+
+.select {
+  width: 208px;
+  margin-left: 0;
+}

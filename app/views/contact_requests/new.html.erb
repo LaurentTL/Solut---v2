@@ -1,0 +1,5 @@
+
+<%= simple_form_for([@event, @contact_request]) do |f| %>
+  <%= f.association :instrument, label: Instrument, required: false %>
+  <%= f.button :submit, "Send Iquiry", id: "profile-btn" %>
+<% end %>
