@@ -39,9 +39,31 @@ html, body {
   background-image: linear-gradient(to left top, #04142c, #0a2645, #0f3a5f, #114f7a, #0c6596);
   border-radius: 5px;
   box-shadow: 0 3px 30px rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.login-input {
-  background-color: salmon;
+.login-container {
 
+  h1 {
+    color: seashell;
+  }
+  p {
+    margin-bottom: 40px;
+    color: seashell;
+  }
+}
+
+.container-login > h2 {
+  background: -webkit-linear-gradient(to right top, #17a8f4, #128bca, #0e6fa2, #09547b, #063a57);
+  -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+}
+
+.login-input > * {
+  background-color: salmon;
+  margin-top: 20px;
+  padding: 0;
 }
