@@ -8,9 +8,24 @@ html, body {
   width: 100%;
   height: 100vh;
   font-family: 'Montserrat';
+  background-color: #021825;
   font-size: 14px;
   font-style: white;
   overflow: hidden;
+  display: inline-block;
+  align-items: center;
+}
+
+body {
+  img {
+    position: absolute;
+    width: 60%;
+    object-fit: cover;
+  }
+
+  .login-container {
+    position: relative;
+  }
 }
 
 .left-scene, .right-scene {
@@ -30,12 +45,13 @@ html, body {
 #home-pic {
   background-position: right 20% top 50%;
   background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1503499746616-a6d202989535?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80");
+  // background-image: url("https://images.unsplash.com/photo-1503499746616-a6d202989535?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80");
+  background-image: url(https://images.unsplash.com/photo-1493246886675-0042d822e0db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
 }
 
 .login-container {
-  width: 70%;
-  height: 80%;
+  width: 400px;
+  height: 550px;
   background-image: linear-gradient(to left top, #04142c, #0a2645, #0f3a5f, #114f7a, #0c6596);
   border-radius: 5px;
   box-shadow: 0 3px 30px rgba(0, 0, 0, .6);
@@ -57,13 +73,12 @@ html, body {
 }
 
 .container-login > h2 {
-  background: -webkit-linear-gradient(to right top, #17a8f4, #128bca, #0e6fa2, #09547b, #063a57);
-  -webkit-background-clip: text;
+  // background: -webkit-linear-gradient(to right top, #17a8f4, #128bca, #0e6fa2, #09547b, #063a57);
+  // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
 }
 
 .login-input > * {
-  background-color: salmon;
   margin-top: 20px;
   padding: 0;
 }
