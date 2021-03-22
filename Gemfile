@@ -26,6 +26,8 @@ gem 'redis', '~> 4.0'
 # Gemfile
 gem 'pundit'
 
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
